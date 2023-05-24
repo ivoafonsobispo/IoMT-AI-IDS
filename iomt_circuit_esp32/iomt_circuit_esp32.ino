@@ -20,7 +20,6 @@ struct DHTSensor {
 // WiFi
 const char* ssid = "SIIC Noticias 2.4GHz";                
 const char* wifi_password = "gluteosmaximus";
-const char *address = "http://10.10.10.249:5683/dht11";
 
 WiFiClient Wificlient;
 WiFiUDP udp;
@@ -72,14 +71,15 @@ void send_coap_message(DHTSensor dht11) {
   h.toCharArray(h_char, sizeof(h_char));
   hi.toCharArray(hi_char, sizeof(hi_char));
 
-  Serial.println("Sending Temperature");
-  coap.put(IPAddress(0x0A,0x0A,0x0A,0xF9), 5683, "temperature", t_char);
   
   Serial.println("Sending Humidity");
-  coap.put(IPAddress(0x0A,0x0A,0x0A,0xF9), 5683, "humidity", h_char);
+  coap.put(IPAddress(0x0A,0x0A,0x0A,0xFA), 5683, "humidity", h_char);
+
+  Serial.println("Sending Temperature");
+  coap.put(IPAddress(0x0A,0x0A,0x0A,0xFA), 5683, "temperature", t_char);
   
   Serial.println("Sending Heat Index");
-  coap.put(IPAddress(0x0A,0x0A,0x0A,0xF9), 5683, "heatindex", hi_char);
+  coap.put(IPAddress(0x0A,0x0A,0x0A,0xFA), 5683, "heatindex", hi_char);
   delay(5000);
 }
 
