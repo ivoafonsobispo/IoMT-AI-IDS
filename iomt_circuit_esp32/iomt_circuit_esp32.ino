@@ -73,13 +73,13 @@ void send_coap_message(DHTSensor dht11) {
 
   
   Serial.println("Sending Humidity");
-  coap.put(IPAddress(0x0A,0x0A,0x0A,0xFA), 5683, "humidity", h_char);
+  coap.put(IPAddress(0x0A,0x0A,0x0A,0xF9), 5683, "humidity", h_char);
 
   Serial.println("Sending Temperature");
-  coap.put(IPAddress(0x0A,0x0A,0x0A,0xFA), 5683, "temperature", t_char);
+  coap.put(IPAddress(0x0A,0x0A,0x0A,0xF9), 5683, "temperature", t_char);
   
   Serial.println("Sending Heat Index");
-  coap.put(IPAddress(0x0A,0x0A,0x0A,0xFA), 5683, "heatindex", hi_char);
+  coap.put(IPAddress(0x0A,0x0A,0x0A,0xF9), 5683, "heatindex", hi_char);
   delay(5000);
 }
 
