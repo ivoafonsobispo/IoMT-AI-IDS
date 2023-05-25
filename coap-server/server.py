@@ -21,7 +21,7 @@ class ResourceTemperature(resource.Resource):
         self._t= request.payload.decode("utf8")
         print("Received Temperature:", self._t)
 
-        response_payload = "Received Temperature: " + self._t
+        response_payload = "Received Temperature: " + self._t + " C"
         return aiocoap.Message(content_format=0,
                                payload=response_payload.encode('utf8'))
 
@@ -38,7 +38,7 @@ class ResourceHumidity(resource.Resource):
         self._h= request.payload.decode("utf8")
         print("Received Humidity:", self._h)
 
-        response_payload = "Received Humidity: " + self._h
+        response_payload = "Received Humidity: " + self._h  + " %"
         return aiocoap.Message(content_format=0,
                                payload=response_payload.encode('utf8'))
 
@@ -55,7 +55,7 @@ class ResourceHeatIndex(resource.Resource):
         self._hi=request.payload.decode('utf8')
         print("Received Heat Index:", self._hi)
 
-        response_payload = "Received Heat Index: " + self._hi
+        response_payload = "Received Heat Index: " + self._hi  + " C"
         return aiocoap.Message(content_format=0,
                                payload=response_payload.encode('utf8'))
 
@@ -78,4 +78,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
