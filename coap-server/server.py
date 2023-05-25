@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 
-import datetime
-import logging
-
 import asyncio
 
 import aiocoap.resource as resource
@@ -19,7 +16,7 @@ class ResourceTemperature(resource.Resource):
 
     async def render_put(self, request):
         self._t= request.payload.decode("utf8")
-        print("Received Temperature:", self._t)
+        print(f"Received Temperature: {self._t} C")
 
         response_payload = "Received Temperature: " + self._t + " C"
         return aiocoap.Message(content_format=0,
@@ -36,9 +33,9 @@ class ResourceHumidity(resource.Resource):
 
     async def render_put(self, request):
         self._h= request.payload.decode("utf8")
-        print("Received Humidity:", self._h)
+        print(f"Received Humidity: {self._h} %")
 
-        response_payload = "Received Humidity: " + self._h  + " %"
+        response_payload = "Received Humidity: % " + self._h + " %"
         return aiocoap.Message(content_format=0,
                                payload=response_payload.encode('utf8'))
 
@@ -53,15 +50,11 @@ class ResourceHeatIndex(resource.Resource):
 
     async def render_put(self, request):
         self._hi=request.payload.decode('utf8')
-        print("Received Heat Index:", self._hi)
+        print(f"Received Heat Index: {self._hi} C")
 
-        response_payload = "Received Heat Index: " + self._hi  + " C"
+        response_payload = "Received Heat Index: " + self._hi + " C"
         return aiocoap.Message(content_format=0,
                                payload=response_payload.encode('utf8'))
-
-# logging setup
-logging.basicConfig(level=logging.INFO)
-logging.getLogger("coap-server").setLevel(logging.DEBUG)
 
 async def main():
 
