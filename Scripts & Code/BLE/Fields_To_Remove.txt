@@ -1,0 +1,15 @@
+frame.section_number
+frame.pkt_len
+frame.pcaplog.data_type
+frame.pcaplog.data_length
+frame.pcaplog.data
+frame.p_prot_data
+frame.len_lt_caplen
+frame.drop_count
+frame.dlt
+frame.cb_pen
+frame.cb_copy
+frame.bblog.ticks
+frame.bblog.serial_nr
+frame.bblog
+comment
