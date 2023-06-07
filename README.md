@@ -12,7 +12,7 @@ The goal of this project is to leverage machine learning techniques to develop a
 
 The repository offers various resources to support the objectives mention above, including:
 
-- `Attacks:` A folder that contains various source code attacks performed on the IoMT network. It includes implementations of known attack techniques, such as replay attacks, injection attacks, and denial-of-service attacks.
+- `Attacks:` A folder that contains various source code attacks performed on the IoMT network. It includes implementations of known attack techniques, such as replay, injection, and denial-of-service attacks.
 
 - `Captures:` Contains a collection of IP-based and BLE (Bluetooth Low Energy) captures. Analyzing these captures can help in identifying patterns, anomalies, and potential security breaches.
 
