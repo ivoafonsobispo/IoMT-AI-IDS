@@ -12,7 +12,7 @@ The goal of this project is to leverage machine learning techniques to develop a
 
 The repository offers various resources to support this objective, including:
 
-- `Articles and Research Papers`: A collection of relevant articles and research papers exploring the concepts, challenges, and existing solutions in the field of IoMT security and intrusion detection.
+- `Articles & Research Papers`: A collection of relevant articles and research papers exploring the concepts, challenges, and existing solutions in the field of IoMT security and intrusion detection.
 
 - `Scripts & Code`: Implementations of CoAP (Constrained Application Protocol) and MQTT (Message Queuing Telemetry Transport) servers and clients for Arduino Yun and ESP32 microcontrollers. These scripts demonstrate how to establish secure communication channels between IoMT devices, and form a basis for the IDS development.
 
