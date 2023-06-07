@@ -12,13 +12,13 @@ The goal of this project is to leverage machine learning techniques to develop a
 
 The repository offers various resources to support this objective, including:
 
-- `Articles & Research Papers`: A collection of relevant articles and research papers exploring the concepts, challenges, and existing solutions in the field of IoMT security and intrusion detection.
+- `Articles & Research Papers:` A collection of relevant articles and research papers exploring the concepts, challenges, and existing solutions in the field of IoMT security and intrusion detection.
 
-- `Scripts & Code`: Implementations of CoAP (Constrained Application Protocol) and MQTT (Message Queuing Telemetry Transport) servers and clients for Arduino Yun and ESP32 microcontrollers. These scripts demonstrate how to establish secure communication channels between IoMT devices, and form a basis for the IDS development.
+- `Scripts & Code:` Implementations of CoAP (Constrained Application Protocol) and MQTT (Message Queuing Telemetry Transport) servers and clients for Arduino Yun and ESP32 microcontrollers. These scripts demonstrate how to establish secure communication channels between IoMT devices, and form a basis for the IDS development.
 
-- `Network Diagrams`: Visual representations of the network architecture and communication flow within an IoMT system. These diagrams help in understanding the infrastructure and identifying potential attack vectors.
+- `Network Diagrams:` Visual representations of the network architecture and communication flow within an IoMT system. These diagrams help in understanding the infrastructure and identifying potential attack vectors.
 
-- `Related Documents`: Supplementary documents, including project requirements, system specifications, and design considerations, which provide insights into the project's scope and overall development process.
+- `Related Documents:` Supplementary documents, including project requirements, system specifications, and design considerations, which provide insights into the project's scope and overall development process.
 
 ### Final Note
 
