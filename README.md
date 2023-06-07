@@ -10,11 +10,15 @@ The goal of this project is to leverage machine learning techniques to develop a
 
 ### Repository Content
 
-The repository offers various resources to support this objective, including:
+The repository offers various resources to support the objectives mention above, including:
 
 - `Articles & Research Papers:` A collection of relevant articles and research papers exploring the concepts, challenges, and existing solutions in the field of IoMT security and intrusion detection.
 
+- `Attacks:` A folder that contains various source code attacks performed on the IoMT network. It includes implementations of known attack techniques, such as replay attacks, injection attacks, and denial-of-service attacks.
+
 - `Scripts & Code:` Implementations of CoAP (Constrained Application Protocol) and MQTT (Message Queuing Telemetry Transport) servers and clients for Arduino Yun and ESP32 microcontrollers. These scripts demonstrate how to establish secure communication channels between IoMT devices, and form a basis for the IDS development.
+
+- `Captures:` Contains a collection of IP-based and BLE (Bluetooth Low Energy) captures. These captures provide real-world examples of network traffic and communication within an IoMT system. Analyzing these captures can help in identifying patterns, anomalies, and potential security breaches.
 
 - `Network Diagrams:` Visual representations of the network architecture and communication flow within an IoMT system. These diagrams help in understanding the infrastructure and identifying potential attack vectors.
 
