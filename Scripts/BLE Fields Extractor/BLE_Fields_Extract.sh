@@ -292,4 +292,4 @@ tshark -r $1 -T fields -E header=y -E separator=, -E quote=d -E occurrence=f \
 -e nordic_ble.protover.bad \
 -e nordic_ble.rssi \
 -e nordic_ble.time \
-> CSV/Bluetooth_Low_Energy_Dataset.csv
+> CSV/BLE_Malicious_Dataset.csv
