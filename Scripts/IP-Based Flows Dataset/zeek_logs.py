@@ -20,14 +20,14 @@ def clean_zeek_log_file(file_path):
     with open(cleaned_file_path, 'w') as file:
         file.writelines(cleaned_lines)
 
-    print(f"[INFO] Saved In/As - {cleaned_file_path}")
+    #print(f"[INFO] Saved In/As - {cleaned_file_path}")
 
 
 def combine_cleaned_logs(flowmeter_file, conn_file, combined_file):
     with open(flowmeter_file, 'r') as flowmeter, open(conn_file, 'r') as conn, open(combined_file, 'w') as combined:
         for conn_line, flow_line in zip(conn, flowmeter):
             combined.write(conn_line.rstrip() + '\t' + flow_line)
-        print(f"[INFO] Combined - {combined_file}")
+        #print(f"[INFO] Combined - {combined_file}")
 
 
 def log_to_csv(log_file, csv_file):
@@ -38,4 +38,4 @@ def log_to_csv(log_file, csv_file):
         # Write the lines to the CSV file
         csv_file.writelines(log_lines)
 
-        print(f'[INFO] Transformation complete. Converted {log_file} to CSV.')
+        #print(f'[INFO] Transformation complete. Converted {log_file} to CSV.')

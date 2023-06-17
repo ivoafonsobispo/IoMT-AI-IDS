@@ -20,7 +20,7 @@ def clean_ips_df(df, path, traffic):
     # Delete the old CSV file
     os.remove(os.path.join(prev_path, 'combined.csv'))
 
-    print(f"[INFO] Filtered data - {path}")
+    #print(f"[INFO] Filtered data - {path}")
 
 
 def add_attack_column(base_directory):

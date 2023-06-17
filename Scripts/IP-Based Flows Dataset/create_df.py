@@ -17,7 +17,7 @@ def main():
             clean_zeek_log_file(log_file_path)
             log_file_path = os.path.join(folder, 'conn.log')
             clean_zeek_log_file(log_file_path)
-    print("[DONE] Cleaning Zeek Log " + time.strftime("%H:%M:%S", time.localtime()))
+    print("[STEP 1/6] Cleaning Zeek Log " + time.strftime("%H:%M:%S", time.localtime()))
 
     for folder in os.listdir():
         if os.path.isdir(folder):
@@ -25,7 +25,7 @@ def main():
             conn_file = os.path.join(folder, 'conn.log.cleaned')
             combined_file = os.path.join(folder, 'combined.log')
             combine_cleaned_logs(flowmeter_file, conn_file, combined_file)
-    print("[DONE] Combining Logs " + time.strftime("%H:%M:%S", time.localtime()))
+    print("[STEP 2/6] Combining Logs " + time.strftime("%H:%M:%S", time.localtime()))
 
 
     for folder in os.listdir():
@@ -33,21 +33,21 @@ def main():
             log_file = os.path.join(folder, 'combined.log')
             csv_file = os.path.join(folder, 'combined.csv')
             log_to_csv(log_file, csv_file)
-    print("[DONE] Log to CSV " + time.strftime("%H:%M:%S", time.localtime()))   
+    print("[STEP 3/6] Log to CSV " + time.strftime("%H:%M:%S", time.localtime())) 
 
     for folder in os.listdir():
         if os.path.isdir(folder):
             df = pd.read_csv(os.path.join(folder, 'combined.csv'), sep='\t')
             clean_ips_df(df, folder, os.path.basename(folder))
-    print("[DONE] Cleaning Unused IP's " + time.strftime("%H:%M:%S", time.localtime()))
+    print("[STEP 4/6] Cleaning Unused IP's " + time.strftime("%H:%M:%S", time.localtime()))
 
     # Set the path to the directory containing the folders
     base_directory = '/home/shanks/projects/iomt-ai-ids/Datasets/IP-Based/'
     add_attack_column(base_directory)
-    print("[DONE] Adding Predicting Label " + time.strftime("%H:%M:%S", time.localtime()))
+    print("[STEP 5/6] Adding Predicting Label " + time.strftime("%H:%M:%S", time.localtime()))
 
     combine_datasets(base_directory)
-    print("[DONE] Combining Dataset " + time.strftime("%H:%M:%S", time.localtime()))
+    print("[STEP 6/6] Combining Dataset " + time.strftime("%H:%M:%S", time.localtime()))
 
     print("[ENDED] " + time.strftime("%H:%M:%S", time.localtime()))
     print("[ELAPSED] " + time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)))
