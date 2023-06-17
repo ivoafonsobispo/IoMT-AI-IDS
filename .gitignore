@@ -2,3 +2,8 @@ Captures/*/*.pcapng
 Captures/*/*
 Datasets/*/*
 Scripts/BLE Fields Extractor/CSV/*
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/iomt-ai-ids.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
