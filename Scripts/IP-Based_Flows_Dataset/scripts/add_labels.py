@@ -4,6 +4,7 @@ import pandas as pd
 
 from scripts.utils import print_with_timestamp
 
+
 def add_labels(folder_path):
     """
     Adds labels to the _combined.csv files in the specified folder path.
@@ -40,8 +41,8 @@ def add_labels(folder_path):
             # Add label column
             df['traffic'] = folder_name
 
-            # Add label column for binary classification
-            if folder_name is 'normal':
+            # Add label column for binary classification if folder name is normal
+            if folder_name == 'normal':
                 df['is_attack'] = 0
             else:
                 df['is_attack'] = 1
