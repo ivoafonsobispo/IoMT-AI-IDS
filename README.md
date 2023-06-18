@@ -34,7 +34,7 @@ By leveraging the resources provided in this repository, developers, researchers
 
 If you have any questions or want to contribute to this project in any terms, contact the authors of this project:
 
-- Ivo Bispo - `2201739@my.ipleiria.pt`
+- Ivo Bispo - `2200672@my.ipleiria.pt`
 - José Areia - `2200655@my.ipleiria.pt`
 
 ### Acknowledgements
