@@ -40,6 +40,12 @@ def add_labels(folder_path):
             # Add label column
             df['traffic'] = folder_name
 
+            # Add label column for binary classification
+            if folder_name is 'normal':
+                df['is_attack'] = 0
+            else:
+                df['is_attack'] = 1
+
             # Write the cleaned contents back to the CSV file
             df.to_csv(combined_file_path, index=False)
 
