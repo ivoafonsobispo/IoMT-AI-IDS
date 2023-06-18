@@ -1,21 +1,7 @@
-import sys
 import os
-import datetime
 import time
 
-if len(sys.argv) != 2:
-    print("Usage: python3 count_lines.py <folder_path>")
-    sys.exit(1)
-
-folder_path = sys.argv[1]
-
-
-def print_with_timestamp(message):
-    """
-    Prints a message with a timestamp in the format: [YYYY-MM-DD HH:MM:SS] message
-    """
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print(f"[{timestamp}] {message}")
+from scripts.utils import print_with_timestamp
 
 
 def combine_logs(folder_path):
@@ -71,6 +57,3 @@ def combine_logs(folder_path):
     end_time = time.time()
     execution_time = end_time - start_time
     print_with_timestamp(f"Script completed in {execution_time:.2f} seconds")
-
-
-combine_logs(folder_path)
