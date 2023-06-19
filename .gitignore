@@ -7,3 +7,4 @@ Scripts/BLE Fields Extractor/CSV/*
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
+*.png
