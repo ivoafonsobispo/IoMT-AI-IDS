@@ -28,15 +28,11 @@ cd /usr/local/zeek/bin
 # Start the timer
 start_time=$(date +%s)
 
-# Loop through each folder in the parent directory
-for folder in "$PARENT_DIR"/*/; do
-  # Get the folder name
-  folder_name=$(basename "$folder")
+# Function to process a single pcap file
+process_pcap_file() {
+    local pcap_file=$1
+    local folder_name=$2
 
-  echo "Processing folder: $folder_name"
-
-  # Loop through each pcap file in the folder
-  for pcap_file in "$folder"/*.pcap; do
     # Get the filename without extension
     filename=$(basename "$pcap_file" .pcap)
 
@@ -56,6 +52,44 @@ for folder in "$PARENT_DIR"/*/; do
     file_end_time=$(date +%s)
     file_elapsed_time=$((file_end_time - file_start_time))
     echo "Completed processing file: $filename.pcap (Time: $file_elapsed_time seconds)"
+}
+
+export -f process_pcap_file
+
+# Loop through each folder in the parent directory
+for folder in "$PARENT_DIR"/*/; do
+  # Get the folder name
+  folder_name=$(basename "$folder")
+
+  echo "Processing folder: $folder_name"
+
+  # Get the list of pcap files in the folder
+  pcap_files=("$folder"/*.pcap)
+  total_files=${#pcap_files[@]}
+  processed_files=0
+
+  # Process each pcap file in parallel
+  for pcap_file in "${pcap_files[@]}"; do
+    ((processed_files++))
+    # Get the filename without extension
+    filename=$(basename "$pcap_file" .pcap)
+
+    echo "[$processed_files/$total_files] Processing file: $filename.pcap"
+
+    # Start the timer for the current file
+    file_start_time=$(date +%s)
+
+    # Run Zeek flowmeter for the pcap file
+    sudo ./zeek flowmeter -r "$pcap_file"
+
+    # Rename the generated log files
+    sudo mv conn.log "$LOG_DIR/$folder_name/$filename"_conn.log
+    sudo mv flowmeter.log "$LOG_DIR/$folder_name/$filename"_flowmeter.log
+
+    # Calculate the elapsed time for the current file
+    file_end_time=$(date +%s)
+    file_elapsed_time=$((file_end_time - file_start_time))
+    echo "[$processed_files/$total_files] Completed processing file: $filename.pcap (Time: $file_elapsed_time seconds)"
   done
 
   echo "Completed processing folder: $folder_name"
