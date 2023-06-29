@@ -41,8 +41,10 @@ def clean_csv(folder_path):
             # Filter rows based on condition
             if traffic in ['normal', 'camoverflow']:
                 df = df[~df['id.orig_h'].isin(['10.10.10.252', '10.10.10.253'])]
+                df = df[df['proto'] != 'proto']  # Exclude rows where 'proto' column has the value 'proto'
             else:
                 df = df[df['id.orig_h'].isin(['10.10.10.252', '10.10.10.253'])]
+                df = df[df['proto'] != 'proto']  # Exclude rows where 'proto' column has the value 'proto'
 
             # Drop unnecessary columns
             df = df.drop(['ts', 'uid', 'uid.1'], axis=1)
@@ -56,3 +58,4 @@ def clean_csv(folder_path):
     end_time = time.time()
     execution_time = end_time - start_time
     print_with_timestamp(f"Script completed in {execution_time:.2f} seconds")
+
