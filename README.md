@@ -1,43 +1,56 @@
-# A Machine Learning-Based Intrusion Detection System for the Internet of Medical Things
+# Machine Learning-Based IoMT Intrusion Detection System
 
-### Description
+## Description
 
-This repository contains the final project for the Computer Engineering Bachelor Degree of <a href="https://github.com/ivoafonsobispo">Ivo Bispo</a> and <a href="https://github.com/joseareia">José Areia</a>, focusing on the development of a Machine Learning-Based Intrusion Detection System (IDS) for the Internet of Medical Things (IoMT).
+This repository showcases the Computer Engineering Bachelor Degree project by [Ivo Bispo](https://github.com/ivoafonsobispo) and [José Areia](https://github.com/joseareia). The project focuses on creating a robust Machine Learning-Based Intrusion Detection System (IDS) tailored for the Internet of Medical Things (IoMT).
 
-The Internet of Medical Things refers to the interconnected network of medical devices and healthcare systems that collect and exchange patient data. While the IoMT brings numerous benefits, it also introduces security challenges, making it crucial to have robust intrusion detection mechanisms in place.
+The IoMT, encompassing interconnected medical devices and healthcare systems, presents both opportunities and security challenges. This project addresses the imperative need for a reliable IDS to ensure the security of IoMT environments.
 
-The goal of this project is to leverage machine learning techniques to develop an effective IDS that can detect and mitigate potential intrusions within an IoMT environment. 
+## "Why?"
 
-### Repository Content
+The IoMT's potential benefits are accompanied by security risks. This project aims to leverage machine learning techniques to develop an effective IDS capable of identifying and mitigating potential intrusions within an IoMT ecosystem.
 
-The repository offers various resources to support the objectives mention above, including:
+## Quick Start
 
-- `Attacks` A folder that contains various source code attacks performed on the IoMT network. It includes implementations of known attack techniques, such as replay, injection, and denial-of-service attacks.
+Explore the provided resources to gain insights into IoMT security challenges and innovative approaches to building intrusion detection systems. Check out the code, articles, and documents to enhance your understanding and contribute to the advancement of secure IoMT systems.
 
-- `Captures` Contains a collection of IP-based and BLE (Bluetooth Low Energy) captures. Analyzing these captures can help in identifying patterns, anomalies, and potential security breaches.
+## Usage
 
-- `Datasets` This folder contains all the datasets developed in the project, including BLE datasets and IP-Based datasets. These datasets provide valuable information and real-world examples of network traffic and communication within an IoMT system.
+### Attacks
 
-- `Network Diagrams` Visual representations of the network architecture and communication flow within an IoMT system. These diagrams help in understanding the infrastructure and identifying potential attack vectors.
+Folder containing source code for various IoMT network attacks, such as replay, injection, and denial-of-service attacks.
 
-- `Related Documents` Supplementary documents, including project requirements, system specifications, and design considerations, which provide insights into the project's scope and overall development process.
+### Captures
 
-- `IoMT Scenario Code` Implementations of CoAP (Constrained Application Protocol) and MQTT (Message Queuing Telemetry Transport) servers and clients for Arduino Yun and ESP32 microcontrollers. These implementations demonstrate how to establish secure communication channels between IoMT devices, and form a basis for the IDS development.
+Collection of IP-based and BLE (Bluetooth Low Energy) captures for analyzing patterns, anomalies, and potential security breaches.
 
-- `Scripts` This folder contains two scripts that are used in the project. The "BLE Fields Extractor" script is designed to extract all the fields in a BLE PCAP file, providing insights into device identifiers, UUIDs, data payloads, and other relevant information. The "Untitled192" script is used in the MQTT and COAP server. It starts and stops the servers while capturing traffic in rotating one-hour log files.
+### Datasets - [Download from Zenodo](https://zenodo.org/records/8116338)
 
-### Final Note
+All datasets developed in the project, including BLE and IP-based datasets, providing real-world examples of network traffic within an IoMT system.
 
-By leveraging the resources provided in this repository, developers, researchers, and security enthusiasts can gain a deeper understanding of IoMT security challenges and explore innovative approaches to developing robust intrusion detection systems. Feel free to explore the code, articles, and documents to enhance your knowledge and contribute to the advancement of secure IoMT systems.
+### Network Diagrams
 
-### Contributors & Authors
+Visual representations of IoMT network architecture and communication flow, aiding in understanding infrastructure and identifying potential attack vectors.
 
-If you have any questions or want to contribute to this project in any terms, contact the authors of this project:
+### Related Documents
 
-- Ivo Bispo - `2200672@my.ipleiria.pt`
+Supplementary documents, including project requirements, system specifications, and design considerations, offering insights into the project's scope and development process.
+
+### IoMT Scenario Code
+
+Implementations of CoAP (Constrained Application Protocol) and MQTT (Message Queuing Telemetry Transport) servers and clients for Arduino Yun and ESP32 microcontrollers. These implementations demonstrate secure communication channels between IoMT devices, forming the basis for IDS development.
+
+### Scripts
+
+Folder containing two scripts: "BLE Fields Extractor" for extracting fields in a BLE PCAP file and "Untitled192" for managing MQTT and COAP servers and capturing traffic.
+
+## Contributing
+
+If you have questions or want to contribute, contact the authors:
+
+- Ivo Bispo - `ivoafobispo@gmail.com`
 - José Areia - `2200655@my.ipleiria.pt`
 
-### Acknowledgements
+## Acknowledgements
 
-We would like to express our sincere gratitudes to Professor Leonel Santos and Researcher Rogério Costa for their invaluable guidance and support throughout the development of this final project.
-
+Special thanks to Professor Leonel Santos and Researcher Rogério Costa for their invaluable guidance and support throughout the project development.
