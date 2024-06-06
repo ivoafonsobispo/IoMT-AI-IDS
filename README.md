@@ -27,4 +27,3 @@ The IoMT, comprising interconnected medical devices and healthcare systems, face
 ## Getting Involved
 
 - **Contributing:** Contact the authors with questions or contributions: Ivo Bispo (`ivoafobispo@gmail.com`) or José Areia (`2200655@my.ipleiria.pt`).
-- **Acknowledgements:** Special thanks to Professor Leonel Santos and Researcher Rogério Costa for their guidance and support.
