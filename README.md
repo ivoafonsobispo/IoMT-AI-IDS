@@ -21,7 +21,7 @@ The IoMT, comprising interconnected medical devices and healthcare systems, face
 - **Network Diagrams:** Visual representations of IoMT network architecture and communication flow.
 - **Related Documents:** Project requirements, system specifications, and design considerations.
 - **IoMT Scenario Code:** Implementations of CoAP and MQTT servers and clients for Arduino Yun and ESP32 microcontrollers.
-- **Machine Learnming:** Notebooks with the Pre-Processing and Creation of the Models.
+- **Machine Learning:** Notebooks with the Pre-Processing and Creation of the Models.
 - **Scripts:** Two scripts for extracting BLE fields and managing MQTT and COAP servers.
 
 ## Getting Involved
