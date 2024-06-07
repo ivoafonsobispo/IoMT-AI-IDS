@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository presents a Bachelor's degree project in Computer Engineering, developed by [Ivo Bispo](https://github.com/ivoafonsobispo) and [José Areia](https://github.com/joseareia), focusing on creating a robust Machine Learning-Based Intrusion Detection System (IDS) for the Internet of Medical Things (IoMT).
+This repository presents a Bachelor's degree project in Computer Engineering, developed by [Ivo Bispo](https://github.com/ivoafonsobispo) and [José Areia](https://github.com/joseareia). The project focuses on creating a robust Machine Learning-Based Intrusion Detection System (IDS) for the Internet of Medical Things (IoMT).
 
 ## Motivation
 
